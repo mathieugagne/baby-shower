@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.2.7'
 
 gem 'rails', '~> 4.0.3'
 gem 'memcachier'

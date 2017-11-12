@@ -1,0 +1,55 @@
+<div class="row header-space jumbotron">
+  <div class="col-md-6">
+    <%= image_tag 'joanna_vlad_baby_shower_invitation.png', alt: '', class: 'img-responsive' %>
+  </div>
+  <div class="col-md-6">
+    <h2>Hey <%= @attendee.name %>!</h2>
+    <p>
+      You have been invited to join us for a baby shower in honor of Joanna & Vlad.
+    </p>
+    <% unless @attendee.attending %>
+      <%= simple_form_for @attendee, html: {class: 'form-horizontal', role: 'form'} do |f| %>
+        <p>
+          Please confirm your presence with the form below.
+        </p>
+        <div class="form-group">
+          <label for="attending" class="col-sm-4 control-label">How many of you?</label>
+          <div class="col-sm-8">
+            <%= f.input_field :attendees_count, as: :integer %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-8">
+            <div class="checkbox">
+              <div class="boolean optional attendee_attending"><input name="attendee[attending]" type="hidden" value="0"><label class="boolean optional" for="attendee_attending"><input checked="checked" class="boolean optional" id="attendee_attending" name="attendee[attending]" type="checkbox" value="1">I will be attending</label></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-8">
+            <%= content_tag :button, type: "submit", class: "btn btn-confirm" do %>
+            <%= icon_tag 'check' %> Confirm
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>
+        We are happy you'll be joining us :)
+      </p>
+    <% end %>
+    <p>
+      You can find a link to the registry <%= link_to 'here', 'http://sokindregistry.org/registry/2843' %>.
+    </p>
+    <p>
+      For more information, you may contact Avalon<br/>
+      <%= icon_tag('envelope') %> <%= mail_to('avalon.powell@gmail.com') %><br />
+      <%= icon_tag('phone') %> 514.402.1055
+    </p>
+    <p>
+      Add to <a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=Joanna+%26+Vlad+Baby+Shower&amp;dates=20140405T200000Z/20140405T200000Z&amp;location=3442+La+Fontaine%2c+Montreal" target="_blank">Google Calendar,</a>
+      <a href="/baby-shower-invite.ics" target="_blank">iCal</a> or 
+      <a href="/baby-shower-invite.vcs" target="_blank">Outlook</a>
+    </p>
+  </div>
+</div>

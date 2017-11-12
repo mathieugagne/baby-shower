@@ -1,0 +1,42 @@
+<h1 class='page-header'>
+  Listing attendees <small><%= Attendee.attending.sum(:attendees_count) %> confirmed so far</small>
+  <%= link_to "#{icon_tag('plus')} Add Attendee".html_safe, new_attendee_path, class: 'btn btn-primary pull-right' %>
+</h1>
+
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Attending</th>
+      <th>Head Count</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendees.each do |attendee| %>
+      <tr class='<%= attendee_row_class(attendee) %>'>
+        <td><%= attendee.name %></td>
+        <td><%= attendee.email %></td>
+        <td><%= attending_icon_tag(attendee) %></td>
+        <td><%= attendee.attendees_count %></td>
+        <td><%= link_to "#{icon_tag('envelope')} Resend Invite".html_safe, notify_attendee_path(attendee), class: 'btn btn-info' %></td>
+        <td><%= link_to "#{icon_tag('pencil')} Edit".html_safe, edit_attendee_path(attendee), class: 'btn btn-primary' %></td>
+        <td><%= link_to "#{icon_tag('times')} Remove".html_safe, attendee, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan='3'>Total Attending</td>
+      <td colspan='3'><%= Attendee.attending.sum(:attendees_count) %></td>
+    </tr>
+  </tfoot>
+</table>
+
+<br>
+
+<%= link_to 'New Attendee', new_attendee_path, class: 'btn btn-primary' %>

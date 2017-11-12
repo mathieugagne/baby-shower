@@ -1,0 +1,14 @@
+<% flash.each do |name, msg| %>
+  <div class="alert alert-<%= name == :notice ? 'success' : 'info' %>">
+    <%= msg %>
+  </div>
+<% end %>
+<%= simple_form_for(@attendee) do |f| %>
+
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :attending, as: :select, collection: [["Don't know", nil], ['Yes', true], ['No', false]], prompt: false %>
+  <%= f.input :attendees_count %>
+
+  <%= f.submit 'Update', class: 'btn btn-primary' %>
+<% end %>

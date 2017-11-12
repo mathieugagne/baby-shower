@@ -1,0 +1,10 @@
+.btn-confirm {
+  background-color: $aqua;
+  border-color: $aqua;
+  background-image: linear-gradient($aqua);
+  color: $white;
+  &:hover {
+    background-color: darken($aqua, 5%);
+    color: $white !important;
+  }
+}

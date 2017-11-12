@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default from: "avalon.powell@gmail.com"
+  default from: "madrilena@me.com"
 
   def notify_attendee attendee
     @attendee = attendee

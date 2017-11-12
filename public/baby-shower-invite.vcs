@@ -1,13 +1,13 @@
 BEGIN:VCALENDAR
 VERSION:1.0
 BEGIN:VEVENT
-DTSTART:20140405T200000Z
-DTEND:20140405T200000Z
+DTSTART:20171203T190000Z
+DTEND:20171203T210000Z
 SUMMARY:Catherine & Alberto Baby Shower
 DESCRIPTION:
  \nCatherine & Alberto Baby Shower
- \nEvent time: Saturday, April 5th at 4:00 PM
- \nTo be held at: 3442 La Fontaine, Montreal
-LOCATION:3442 La Fontaine\, Montreal
+ \nEvent time: Saturday, December 3rd at 2:00 PM
+ \nTo be held at: 160, av. Metcalfe, Westmount
+LOCATION:160, av. Metcalfe\, Westmount
 END:VEVENT
 END:VCALENDAR

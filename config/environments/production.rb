@@ -1,4 +1,4 @@
-JoannaVladBabyShower::Application.configure do
+BabyShower::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -63,8 +63,8 @@ JoannaVladBabyShower::Application.configure do
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
-  config.action_mailer.asset_host = "http://joanna-vlad-baby-shower.herokuapp.com"
-  config.action_mailer.default_url_options = { :host => 'joanna-vlad-baby-shower.herokuapp.com' }
+  config.action_mailer.asset_host = "http://catherine-alberto-baby-shower.herokuapp.com"
+  config.action_mailer.default_url_options = { :host => 'catherine-alberto-baby-shower.herokuapp.com' }
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache

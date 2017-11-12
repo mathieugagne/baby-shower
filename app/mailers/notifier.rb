@@ -5,7 +5,7 @@ class Notifier < ActionMailer::Base
     @attendee = attendee
     mail(
       to: @attendee.email,
-      subject: 'Joanna & Vlad Baby Shower'
+      subject: 'Catherine & Alberto Baby Shower'
     )
   end
 

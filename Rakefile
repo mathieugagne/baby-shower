@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-JoannaVladBabyShower::Application.load_tasks
+BabyShower::Application.load_tasks

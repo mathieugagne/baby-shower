@@ -1,4 +1,4 @@
-JoannaVladBabyShower::Application.routes.draw do
+BabyShower::Application.routes.draw do
   resources :attendees do
     get :notify, on: :member
     get :attending, on: :member

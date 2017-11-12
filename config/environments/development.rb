@@ -1,4 +1,4 @@
-JoannaVladBabyShower::Application.configure do
+BabyShower::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.delivery_method = :letter_opener
   # In the development environment your application's code is reloaded on
